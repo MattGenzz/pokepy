@@ -1,0 +1,60 @@
+{
+    "fire":{
+        "Flamethrower":{
+            "power": 90,
+            "accuracy": 100
+        },
+        "Blast Burn":{
+            "power": 120,
+            "accuracy": 70
+        },
+        "Fire Punch":{
+            "power": 70,
+            "accuracy": 95
+        }
+    },
+    "water":{
+        "Water Gun":{
+            "power": 50,
+            "accuracy": 100
+        },
+        "Bubblebeam":{
+            "power": 70,
+            "accuracy": 100
+        },
+        "Hydro Pump":{
+            "power": 130,
+            "accuracy": 70
+        },
+        "Surf":{
+            "power": 80,
+            "accuracy": 100
+        }
+    },
+    "grass":{
+        "Vine Whip":{
+            "power": 70,
+            "accuracy": 100
+        },
+        "Razor Leaf":{
+            "power": 80,
+            "accuracy": 100
+        },
+        "Frenzy Plant":{
+            "power": 120,
+            "accuracy": 80
+        }
+    },
+    "earth":{
+        "Earthquake":{
+            "power": 60,
+            "accuracy": 100
+        }
+    },
+    "flying":{
+        "Fly":{
+            "power": 70,
+            "accuracy": 100
+        }
+    }
+}

@@ -1,6 +1,7 @@
 import time
 import numpy as np
 import sys
+import json
 
 # Delay printing
 
@@ -23,13 +24,15 @@ class Pokemon:
         self.defense = EVs['DEFENSE']
         self.health = health
         self.bars = 20 # Amount of health bars
-
+        
+    def move(self, arr = {}):
+        self.moves = arr
 
     def fight(self, Pokemon2):
         # Allow two pokemon to fight each other
 
         # Print fight information
-        print("-----POKEMONE BATTLE-----")
+        print("-----POKEMON BATTLE-----")
         print(f"\n{self.name}")
         print("TYPE/", self.types)
         print("ATTACK/", self.attack)
@@ -143,9 +146,12 @@ class Pokemon:
 
 
 if __name__ == '__main__':
+    data = open('Attacks.json',  mode="r", encoding="utf-8")
+    attacks = json.load(data)
     #Create Pokemon
-    Charizard = Pokemon('Charizard', 'Fire', ['Flamethrower', 'Fly', 'Blast Burn', 'Fire Punch'], {'ATTACK':15, 'DEFENSE': 9})
+    Charizard = Pokemon('Charizard', 'Fire', '', {'ATTACK':15, 'DEFENSE': 9})
     Blastoise = Pokemon('Blastoise', 'Water', ['Water Gun', 'Bubblebeam', 'Hydro Pump', 'Surf'],{'ATTACK': 12, 'DEFENSE':11})
     Venusaur = Pokemon('Venusaur', 'Grass', ['Vine Wip', 'Razor Leaf', 'Earthquake', 'Frenzy Plant'],{'ATTACK':9, 'DEFENSE':15})
 
+    Charizard.move(list(attacks['fire'].keys()))
     Charizard.fight(Blastoise) # Get them to fight
